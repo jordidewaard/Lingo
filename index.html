@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lingo!</title>
+    <link rel="stylesheet" type="text/css" href="stylesheet.css"/>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width"/>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Lingo!</h1> 
+      </header>
+      
+      <div class="gameboard">
+
+      <div id="popup" class="overlay">
+        <div class="popup">
+          <h2>Gefeliciteerd!</h2>
+          <a class="close" href="#">×</a>
+            <div class="content">U heeft het woord geraden. Ga zo door!</div>
+        </div>
+      </div>
+
+      <div class="alert" id="alert">Oeps! Je hebt te weinig tekens in gevoerd.</div>
+      
+      <!-- Geschiedenis -->
+      <div class="history" id="history"><h2 style="margin-left: -14px; margin-top: -25px;"><center>Geschiedenis</center></h2>
+
+      <!-- Div 'woord' zorgt ervoor dat die al de vijf letters in één keer kan pakken --> 
+        <div class="woord" id="woord">
+          <div class="guessTable" id="guessTable">&raquo;
+            <div id="option0" style="display: inline;"></div>
+            <div id="option1" style="display: inline;"></div>
+            <div id="option2" style="display: inline;"></div>
+            <div id="option3" style="display: inline;"></div>
+            <div id="option4" style="display: inline;"></div>
+          </div> 
+        </div>
+      </div>
+      <!-- Einde 'woord' -->
+
+        <input type="text" id="guessInput" class="guessInput play" maxlength="5" size="5"/>
+
+       
+        <div class="rightJustify">
+          <button onclick="javascript:Check();" class="guessSubmit play">Enter!</button>
+        </div>
+        <p class="instruct play">Schrijf een woord van vijf letters in het venster.</p>
+        
+      </div>
+
+      <script src="words-nl.js"></script>
+      <script src="script.js"></script>
+
+    </div>
+  </body>
+</html>
